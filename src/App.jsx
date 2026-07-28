@@ -12,7 +12,9 @@ function App() {
 <Route path="" element={<CustomerHome/>}>
 
   <Route path="" element={<FeaturedProductList/>}/>
-  <Route path="/product/:customer-id" element={<ProductList/>}/>
+
+<Route path="/product/:categoryId" element={<ProductList />} />
+
   
 </Route>
 <Route path="*" element={<h1>404 - Page Not Found</h1>}/>
