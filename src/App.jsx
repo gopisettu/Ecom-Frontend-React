@@ -1,11 +1,24 @@
+import { Routes, Route } from 'react-router'
 
+import FeaturedProductList from './assets/Customer/FeaturedProductList'
+import ProductList from './assets/Customer/ProductList'
+import CustomerHome from './assets/Customer/CustomerHome'
 function App() {
 
 
   return (
-    <>
-    <h1>Hello from Ecom</h1>
-    </>
+  
+    <Routes>
+<Route path="" element={<CustomerHome/>}>
+
+  <Route path="" element={<FeaturedProductList/>}/>
+  <Route path="/product/:customer-id" element={<ProductList/>}/>
+  
+</Route>
+<Route path="*" element={<h1>404 - Page Not Found</h1>}/>
+
+    </Routes>
+
   )
 }
 
