@@ -1,5 +1,5 @@
 import NavBar from "./NavBar"
-import {Outlet} from "react-router"
+import {Outlet} from "react-router-dom"
 function CustomerHome(){
     return(
 

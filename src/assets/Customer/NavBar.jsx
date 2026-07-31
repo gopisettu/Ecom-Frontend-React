@@ -1,9 +1,17 @@
-import { Link } from "react-router";
+import { Link,useNavigate } from "react-router-dom";
 import { useEffect,useState } from "react";
 import axios from "axios";
 
+
 const NavBar=()=>{
     const [category,setCategory]=useState([]);
+    const navigate=useNavigate();
+
+    const username = localStorage.getItem("username");
+    const token = localStorage.getItem("token");
+    
+    const isLoggedIn = username && token;
+
 const url_getAllCategory="http://localhost:8080/api/category/getAll";
     useEffect(()=>{
 
@@ -51,6 +59,31 @@ setCategory(response.data)
       <li className="nav-item">
         <a className="nav-link disabled" href="#">Disabled</a>
       </li>
+     {
+  isLoggedIn ? (
+    <li className="nav-item">
+      <button
+        className="btn btn-outline-danger"
+        onClick={() => {
+          localStorage.clear();
+          navigate("/login");
+        }}
+      >
+        Logout
+      </button>
+    </li>
+  ) : (
+    <li className="nav-item">
+      <button
+        className="btn btn-outline-success"
+        onClick={() => navigate("/login")}
+      >
+        Login
+      </button>
+    </li>
+  )
+}
+      
     </ul>
   </div>
 </nav>
