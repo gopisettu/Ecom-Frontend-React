@@ -48,19 +48,19 @@ case "PREV":
     return(
        <div className="container">
         
-        <div class="card">
-  <div class="card-body">
+        <div className="card">
+  <div className="card-body">
     <div className="card-title">Sort By</div>
   <div className="row mt-2 mb-2">
 
-  <div class="form-check">
+  <div className="form-check">
     
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"/>
+        <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"/>
         
-        <label class="form-check-label" for="gridRadios2">
+        <label className="form-check-label" >
           Ascending
         </label>
-        <label class="form-check-label" for="gridRadios2">
+        <label className="form-check-label" >
           Descinding
         </label>
       </div>
@@ -93,12 +93,12 @@ case "PREV":
             </div>
             <div className="col">
             <nav aria-label="Page navigation example">
-  <ul class="pagination aligin-item-center">
-    <li class="page-item"><button  onClick={()=>pageChange("PREV")}  class="page-link" href="#">Previous</button></li>
-    <li class="page-item"><button  onClick={()=>sizeChange(2)} class="page-link" href="#">2</button></li>
-    <li class="page-item"><button  onClick={()=>sizeChange(7)} class="page-link" href="#">7</button></li>
-    <li class="page-item"><button onClick={()=>sizeChange(9)}  class="page-link" href="#">9</button></li>
-    <li class="page-item"><button  onClick={()=>pageChange("NEXT")}  class="page-link" href="#">Next</button></li>
+  <ul className="pagination aligin-item-center">
+    <li className="page-item"><button  onClick={()=>pageChange("PREV")}  className="page-link" href="#">Previous</button></li>
+    <li className="page-item"><button  onClick={()=>sizeChange(2)} className="page-link" href="#">2</button></li>
+    <li className="page-item"><button  onClick={()=>sizeChange(7)} className="page-link" href="#">7</button></li>
+    <li className="page-item"><button onClick={()=>sizeChange(9)}  className="page-link" href="#">9</button></li>
+    <li className="page-item"><button  onClick={()=>pageChange("NEXT")}  className="page-link" href="#">Next</button></li>
   </ul>
 </nav>
             </div>

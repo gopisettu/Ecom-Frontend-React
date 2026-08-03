@@ -1,6 +1,6 @@
 import { AddToCart,Delete_From_Cart } from "../Actions/CartAction"
 const initialState={
-    cart:[]
+    cart:[],
 }
 
 export const CartReducer=(state=initialState,action)=>{
@@ -13,6 +13,8 @@ export const CartReducer=(state=initialState,action)=>{
             [...state],
             cart=state.cart.filter((p)=>p.id!=action.payload)
             break;
+            default:
+                return state;
 
     }
 
